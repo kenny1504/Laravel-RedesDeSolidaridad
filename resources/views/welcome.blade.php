@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Redes De Solidaridads
+                   Redes De Solidaridad
                 </div>              
                 
             </div>
