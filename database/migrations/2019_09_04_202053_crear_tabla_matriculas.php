@@ -20,8 +20,6 @@ class CrearTablaMatriculas extends Migration
             $table->foreign('Ofertaid','Fk_matriculas_ofertas')->references('id')->on('ofertas')->onUpdate('restrict')->onDelete('restrict'); 
             $table->unsignedInteger('Turnoid');
             $table->foreign('Turnoid','Fk_matriculas_turnos')->references('id')->on('turnos')->onUpdate('restrict')->onDelete('restrict'); 
-            $table->unsignedInteger('Turnoid');
-            $table->foreign('Turnoid','Fk_matriculas_turnos')->references('id')->on('turnos')->onUpdate('restrict')->onDelete('restrict'); 
             $table->unsignedInteger('SituacionMatriculaid');
             $table->foreign('SituacionMatriculaid','Fk_matriculas_situacionMatriculas')->references('id')->on('situacionMatriculas')->onUpdate('restrict')->onDelete('restrict'); 
             $table->unsignedInteger('Estudianteid');
