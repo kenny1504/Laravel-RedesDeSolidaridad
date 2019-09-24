@@ -48,7 +48,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#" data-toggle="modal" data-target="#modal_Materia"><i class="fa fa-circle-o text-aqua" ></i> Agregar </a></li>
+            <li><a href="#" data-toggle="modal" data-target="#modal_Materia" id="m"><i class="fa fa-circle-o text-aqua" ></i> Agregar </a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> Asignar</a></li>
             <li><a href="{{route('Mostrar_materia')}}"  method="GET"><i class="fa fa-circle-o text-aqua"></i> Mostrar</a></li>
           </ul>

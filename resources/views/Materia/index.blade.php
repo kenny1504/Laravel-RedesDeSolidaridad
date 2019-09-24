@@ -11,7 +11,7 @@
             <div class="box">
             <div class="box-header">
               <h2 class="box-title text-light-blue">Asignaturas</h2>
-              <a href="#" data-toggle="modal" data-target="#modal_Materia" class="btn btn-warning btn-sm pull-right">Agregar asignatura</a>
+              <a href="#" data-toggle="modal" data-target="#modal_Materia" class="btn btn-warning btn-sm pull-right" id="m2">Agregar asignatura</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body panel box box-primary">

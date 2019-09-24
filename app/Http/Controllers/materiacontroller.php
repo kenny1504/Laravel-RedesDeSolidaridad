@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+
 use Illuminate\Http\Request;
 use Validator;
 use Response;
@@ -43,12 +44,24 @@ class materiacontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function guardar(validacionasignaturas $request){
-        
-        $asignatura = new asignaturas();
+    public function guardar(Request $request){
+        $rules = array(
+            'Nombre' => 'required|max:50|unique:asignaturas,Nombre,',
+          );
+        $validator = Validator::make ( Input::all(), $rules);
+        if ($validator->fails())
+        return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
+        else {
+            $asignatura = new asignaturas();
+            $asignatura->Nombre = $request->Nombre;
+            $asignatura->save();
+            return response()->json($asignatura);
+        }
+
+       /* $asignatura = new asignaturas();
         $asignatura->Nombre = $request->Nombre;
         $asignatura->save();
-        return response()->json($asignatura);
+        return response()->json($asignatura); */
       
   }
 

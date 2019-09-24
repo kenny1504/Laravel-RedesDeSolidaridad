@@ -4,11 +4,10 @@
 @endsection
 
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
-<form  id="ingresar_materia"  >
+<form id="ingresar_materia"  >
     <div class="modal  modal-info fade"  id="modal_Materia" >
               <div class="modal-dialog" >
                 <div class="modal-content" >
-                  @extends("Alertas.error")  
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span></button>
@@ -20,7 +19,7 @@
                         <label for="Nombre" class="col-sm-2 control-label requerido">Nombre</label>                
                         <div class="col-sm-10">
                           <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Asignatura"  required autocomplete="off">
-                          <p class="error text-center alert alert-danger hidden"></p>
+                          <p class="error text-red hidden">error: </p>
                         </div>
                         <br><br>
                     </div>

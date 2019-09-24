@@ -47,7 +47,7 @@
                     <div class="content-wrapper">                
                     @include("Materia.crear")      
                     @include("Alertas.exito") 
-                    @include("Alertas.error")               
+                    @include("Alertas.error")  
                     @yield('contenido')  
                   
                     </div>
@@ -87,7 +87,11 @@
 
       <!--Script para la salida de los mensajes "Error-Exito"--> 
 <script>
-  
+
+  $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
+    $('.error').addClass('hidden');
+  });
+
   $("#Materia").click(function() { //ajax para ingresar materias
     
     if($('input[name=Nombre]').val()!="") // si el campo contiene valores entra 
@@ -101,7 +105,11 @@
         Nombre: $('input[name=Nombre]').val()
       },
       success: function(data){ //agregar el nuevo ingreso a la tabla
-
+       
+        if ((data.errors)) { // si el ajax contiene errores agrega un label indicando el error 
+          $('.error').removeClass('hidden');
+          $('.error').text("Error: "+ data.errors.Nombre); 
+        } else { // si no contiene errores agrega el dato a la tabla asignaturas
         var datos=  "<tr>"+"<td>"+data.Nombre+"</td>"
         + "<td>"+"<button class='btn btn-success' data-toggle='modal' data-target='#' onclick=''><i class=' fa fa-fw fa-pencil'></i></button>"
         + "<button class='btn btn-info' data-toggle='modal' data-target='#' onclick=''><i class='fa fa-fw fa-trash '></i></button>"                                   
@@ -113,13 +121,7 @@
                 $("#exito").modal("hide"); // cierra modal
                 } );
 
-      },
-      error: function(data){ // si contiene errores manda notificacion 
-          //alert("contiene errores");
-          $("#Mensaje").modal("show"); //abre modal Mensaje
-          $("#Mensaje").fadeTo(2000,80).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
-                $("#Mensaje").modal("hide");
-                } );
+      }
 
       }
     });

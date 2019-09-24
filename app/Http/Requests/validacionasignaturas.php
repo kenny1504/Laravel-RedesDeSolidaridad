@@ -35,4 +35,15 @@ class validacionasignaturas extends FormRequest
         ];
         
     }
+    public function response(array $errors){
+        if ($this->ajax()){
+            return response()->json($errors, 200);
+        }
+        else
+        {
+        return redirect($this->redirect)
+                ->withErrors($errors, 'formulario')
+                ->withInput();
+        }
+    }
 }
