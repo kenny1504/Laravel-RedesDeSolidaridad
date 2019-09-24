@@ -13,6 +13,7 @@ class CrearTablaDetalleNotas extends Migration
      */
     public function up()
     {
+        // tabla detalle notas aqui se registra el semestre con sus atributos 
         Schema::create('detalleNotas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Descripcion',50);

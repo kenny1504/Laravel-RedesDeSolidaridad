@@ -13,6 +13,7 @@ class CrearTablaOficios extends Migration
      */
     public function up()
     {
+        // tabla oficio con sus atributos
         Schema::create('oficios', function (Blueprint $table) {
             $table->increments('id');        
             $table->string('Nombre',50);

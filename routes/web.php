@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','iniciocontroller@index')->name ('inicio');
+Route::post('Materia/crear','materiacontroller@guardar')->name ('guardar_materia');
+Route::get('Materia/index','materiacontroller@index')->name ('Mostrar_materia');

@@ -13,6 +13,7 @@ class CrearTablaEstudiantes extends Migration
      */
     public function up()
     {
+        // tabla estudiantes con sus atributos y relaciones con demas tablas
         Schema::create('estudiantes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('personasid');

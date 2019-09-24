@@ -13,6 +13,7 @@ class CrearTablaGradoAsignaturas extends Migration
      */
     public function up()
     {
+        // tabla intermedia entre grados y asignaturas  
         Schema::create('gradoAasignaturas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('Gradoid');

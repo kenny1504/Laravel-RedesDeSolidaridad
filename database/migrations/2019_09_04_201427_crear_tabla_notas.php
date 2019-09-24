@@ -13,6 +13,7 @@ class CrearTablaNotas extends Migration
      */
     public function up()
     {
+        // tabla notas y sus relaciones con demas tablas
         Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('Nota');

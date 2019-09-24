@@ -13,6 +13,7 @@ class CrearTablaTurnos extends Migration
      */
     public function up()
     {
+        // tabla turnos con sus atributos 
         Schema::create('turnos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Nombre',50);

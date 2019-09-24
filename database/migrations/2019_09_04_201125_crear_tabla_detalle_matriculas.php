@@ -13,6 +13,8 @@ class CrearTablaDetalleMatriculas extends Migration
      */
     public function up()
     {
+        // tabla intermedia para matricular asignaturas
+
         Schema::create('detalleMatriculas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('Asignaturaid');

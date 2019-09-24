@@ -13,6 +13,7 @@ class CrearTablaSecciones extends Migration
      */
     public function up()
     {
+        // tabla secciones con sus atributos 
         Schema::create('secciones', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Codigo',50);

@@ -13,6 +13,7 @@ class CrearTablaGrados extends Migration
      */
     public function up()
     {
+        // tabla grados con sus atributos 
         Schema::create('grados', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('Grado');

@@ -13,6 +13,7 @@ class CrearTablaAsignaturas extends Migration
      */
     public function up()
     {
+        // tabla asignaturas con sus atributos 
         Schema::create('asignaturas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Nombre',50);

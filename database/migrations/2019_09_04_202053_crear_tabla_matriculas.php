@@ -13,6 +13,7 @@ class CrearTablaMatriculas extends Migration
      */
     public function up()
     {
+        // tabla matriculas con sus atributos y relaciones con demas tablas
         Schema::create('matriculas', function (Blueprint $table) {
             $table->increments('id');
             $table->date('Fecha');

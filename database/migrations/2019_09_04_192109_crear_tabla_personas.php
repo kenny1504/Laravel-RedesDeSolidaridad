@@ -12,7 +12,7 @@ class CrearTablaPersonas extends Migration
      * @return void
      */
     public function up()
-    {
+    { // tabla Personas con sus atributos
         Schema::create('personas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Cedula',50);

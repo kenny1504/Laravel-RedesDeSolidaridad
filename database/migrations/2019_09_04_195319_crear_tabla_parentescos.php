@@ -13,6 +13,7 @@ class CrearTablaParentescos extends Migration
      */
     public function up()
     {
+        // tabla parentesco con sus atributos 
         Schema::create('parentescos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Parentesco',50);

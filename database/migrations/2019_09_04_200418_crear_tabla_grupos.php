@@ -13,6 +13,7 @@ class CrearTablaGrupos extends Migration
      */
     public function up()
     {
+        // tabla grupos con sus atributos 
         Schema::create('grupos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Grupo',10);

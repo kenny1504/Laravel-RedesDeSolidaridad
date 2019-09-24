@@ -13,6 +13,7 @@ class CrearTablaSituacionMatriculas extends Migration
      */
     public function up()
     {
+        // tabla situacion matricula,  aqui se registra si es repitente,reingreso o nuevo ingreso
         Schema::create('situacionMatriculas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Descripcion',50);

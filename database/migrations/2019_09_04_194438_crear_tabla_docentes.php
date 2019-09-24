@@ -13,6 +13,7 @@ class CrearTablaDocentes extends Migration
      */
     public function up()
     {
+        // tabla docentes tutores con sus atributos y relaciones con demas tablas
         Schema::create('docentes', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('personasid');
