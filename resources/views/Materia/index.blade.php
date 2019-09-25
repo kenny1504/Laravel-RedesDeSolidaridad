@@ -23,18 +23,21 @@
                        </tr>
                     </thead>
                         <tbody> <!--Cuerpo de la tabla -->
+                        {{ csrf_field() }}
+                         <?php  $no=1; ?>
                             @foreach ($asignaturas as $asignatura)
-                                <tr>
+                                <tr class="asignaturas{{$asignatura->id}}" >
                                     <td>{{$asignatura->Nombre}}</td> 
                                 <td>
-                                <button class="btn btn-success" data-toggle="modal" data-target="#" onclick=""><i class=" fa fa-fw fa-pencil"></i></button>
-                                <button class="btn btn-info "  data-toggle="modal" data-target="#" onclick=""><i class="fa fa-fw fa-trash "></i></button>                                   
+                                <button class="btn btn-success" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" onclick=""><i class=" fa fa-fw fa-pencil"></i></button>
+                                <button class="btn btn-info "  data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" onclick=""><i class="fa fa-fw fa-trash "></i></button>                                   
                                 </td>
                                 </tr>
                              @endforeach
                         </tbody>
               </table>
-            </div>
+            </div>                          
+            {{$asignaturas->links()}}
             <div class="panel box box-primary"></div>
             <!-- /.box-body -->
           </div>  

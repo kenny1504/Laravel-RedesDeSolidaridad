@@ -22,7 +22,7 @@ class materiacontroller extends Controller
     public function index()
     {
         
-        $asignaturas = asignaturas::all();
+        $asignaturas = asignaturas::paginate(8); // retorna tabla asignaturas con su paginacion
         //dd("$asignaturas");
         return view('Materia.index')->with('asignaturas',$asignaturas);
     }
@@ -58,7 +58,7 @@ class materiacontroller extends Controller
             return response()->json($asignatura);
         }
 
-       /* $asignatura = new asignaturas();
+       /* $asignatura = new asignaturas(); // ingresar materia con submit 
         $asignatura->Nombre = $request->Nombre;
         $asignatura->save();
         return response()->json($asignatura); */

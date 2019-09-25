@@ -67,71 +67,10 @@
         <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
 
         <script src="{{asset("js/jquery/jquery.validate.min.js")}}"></script>
-        </script><script src="{{asset("js/jquery/localization/messages_es.min.js")}}"></script>
+        <script src="{{asset("js/jquery/localization/messages_es.min.js")}}"></script>
         <script src="{{asset("js/funciones.js")}}"></script>
 
         @yield("scripts")
-
-        <!--Script Futuras validaciones 
-       <script> 
-             function Limpiar(id)
-            {  
-               alert("prueba");
-                var c= document.getElementById("id");
-                c.value="";
-
-                //abrigar a hacer submit al id que recibe
-             // document.getElementById("ingresar_materia").submit();
-            }
-        </script> -->
-
-      <!--Script para la salida de los mensajes "Error-Exito"--> 
-<script>
-
-  $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
-    $('.error').addClass('hidden');
-  });
-
-  $("#Materia").click(function() { //ajax para ingresar materias
-    
-    if($('input[name=Nombre]').val()!="") // si el campo contiene valores entra 
-    {
-
-    $.ajax({
-      type: 'POST',
-      url: '{{route('guardar_materia')}}', //llamada a la ruta ingresar materia
-      data: {
-        _token: $('input[name=_token]').val(),
-        Nombre: $('input[name=Nombre]').val()
-      },
-      success: function(data){ //agregar el nuevo ingreso a la tabla
-       
-        if ((data.errors)) { // si el ajax contiene errores agrega un label indicando el error 
-          $('.error').removeClass('hidden');
-          $('.error').text("Error: "+ data.errors.Nombre); 
-        } else { // si no contiene errores agrega el dato a la tabla asignaturas
-        var datos=  "<tr>"+"<td>"+data.Nombre+"</td>"
-        + "<td>"+"<button class='btn btn-success' data-toggle='modal' data-target='#' onclick=''><i class=' fa fa-fw fa-pencil'></i></button>"
-        + "<button class='btn btn-info' data-toggle='modal' data-target='#' onclick=''><i class='fa fa-fw fa-trash '></i></button>"                                   
-        +"</td>"+"</tr>"; // variable guarda el valor 
-       $('#asignaturas').append(datos); // agrega nuevo registro a tabla
-      
-       $("#exito").modal("show"); //abre modal de exito
-       $("#exito").fadeTo(2000,500).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
-                $("#exito").modal("hide"); // cierra modal
-                } );
-
-      }
-
-      }
-    });
-    $('#Nombre').val(''); // limpiar el input Nombre
-    }
-
-  }); //fin del ajax
-
-</script>
-
 
      </body>
 </html>
