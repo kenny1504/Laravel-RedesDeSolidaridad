@@ -3,7 +3,7 @@
               <div class="modal-dialog" >
                         <div class="modal-content">
                           <div class="alert alert-success alert-dismissible" >
-                            <li class="icon fa fa-check">Se agrego correctamente</li>
+                            <li class="icon fa fa-check">Tarea realizada con exito</li>
                           </div>
                         </div>
                         <!-- /.modal-content -->

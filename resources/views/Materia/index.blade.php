@@ -20,17 +20,17 @@
                        <tr > 
                          <th>Nombre Asignatura</th>
                          <th></th>
-                       </tr>
+                       </tr>@csrf
                     </thead>
                         <tbody> <!--Cuerpo de la tabla -->
                         {{ csrf_field() }}
                          <?php  $no=1; ?>
                             @foreach ($asignaturas as $asignatura)
-                                <tr class="asignaturas{{$asignatura->id}}" >
+                                <tr id="{{$asignatura->id}}" >
                                     <td>{{$asignatura->Nombre}}</td> 
                                 <td>
-                                <button class="btn btn-success" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" onclick=""><i class=" fa fa-fw fa-pencil"></i></button>
-                                <button class="btn btn-info "  data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" onclick=""><i class="fa fa-fw fa-trash "></i></button>                                   
+                                <button class="btn btn-success" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>
+                                <button class="btn btn-info eliminar-materia "data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>                                   
                                 </td>
                                 </tr>
                              @endforeach

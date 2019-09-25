@@ -105,8 +105,9 @@ class materiacontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function eliminar($id)
+    public function eliminar(request $request)
     {
-        //
+        $asignatura = asignaturas::find ($request->id)->delete();
+        return response()->json();
     }
 }

@@ -1,8 +1,3 @@
-<!-- script -->
-@section("scripts")
-<script src="{{asset("js/js-redes//Materia/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
-<script src="{{asset("js/js-redes//Materia/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
-@endsection
 
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
 <form id="ingresar_materia"  >

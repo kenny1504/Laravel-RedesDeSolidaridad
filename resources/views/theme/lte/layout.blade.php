@@ -22,7 +22,7 @@
       
       
 
-        @yield("styles")
+        @yield('styles')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +45,8 @@
                     <!--fin aside -->
 
                     <div class="content-wrapper">                
-                    @include("Materia.crear")      
+                    @include("Materia.crear") 
+                    @include("Materia.eliminar")       
                     @include("Alertas.exito") 
                     @include("Alertas.error")  
                     @yield('contenido')  
@@ -70,7 +71,19 @@
         <script src="{{asset("js/jquery/localization/messages_es.min.js")}}"></script>
         <script src="{{asset("js/funciones.js")}}"></script>
 
-        @yield("scripts")
+
+        <!--********************* script  "Materia" *************************-->
+
+        <script src="{{asset("js/js-redes//Materia/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
+        <script src="{{asset("js/js-redes//Materia/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
+        <script src="{{asset("js/js-redes//Materia/eliminar.js")}}"></script> <!-- script eliminar materia-->
+
+
+
+
+        @yield('scripts')
+        
+
 
      </body>
 </html>
