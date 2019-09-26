@@ -1,16 +1,16 @@
-var data; //variable globel que guarda el dato "tr"
+var data; //variable global que guarda el dato "tr" (Fila a eliminar)
 
 $(".eliminar-materia").click(function() { // ajax para eliminar una materia
-data = $(this).closest("tr"); //captura toda la fila donde se efectuo el click
+data = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
 var iden=$(this).attr("data-id"); // captura el valor "id" de la materia
 $('#eliminar_Materia').modal('show'); // abre ventana modal
 $('#valor').val(iden);   //manda valor "id" a ventana modal
 
-}); //fin del ajax
+}); 
 
 
     $("#confirmar").click(function() {
-        data.remove();
+        
         $.ajax({
                     type: 'POST',
                     url: '/Materia/eliminar', // ruta eliminar materia
@@ -19,6 +19,7 @@ $('#valor').val(iden);   //manda valor "id" a ventana modal
                             id:$('input[name=valor]').val()
                     },
                     success: function(data){
+                    data.remove(); //remueve la fila eliminado 
                     $("#exito").modal("show"); //abre modal de exito
                     $("#exito").fadeTo(2000,500).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
                                 $("#exito").modal("hide"); // cierra modal

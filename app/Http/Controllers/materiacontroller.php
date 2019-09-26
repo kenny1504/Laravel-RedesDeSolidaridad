@@ -24,7 +24,7 @@ class materiacontroller extends Controller
         
         $asignaturas = asignaturas::paginate(8); // retorna tabla asignaturas con su paginacion
         //dd("$asignaturas");
-        return view('Materia.index')->with('asignaturas',$asignaturas);
+        return view('Materia.index')->with('asignaturas',$asignaturas); 
     }
 
     /**
@@ -45,17 +45,17 @@ class materiacontroller extends Controller
      */
     
     public function guardar(Request $request){
-        $rules = array(
-            'Nombre' => 'required|max:50|unique:asignaturas,Nombre,',
+        $rules = array( //reglas de validaciones
+            'Nombre' => 'required|max:50|unique:asignaturas,Nombre,', // regla de validacion del campo Nombre "Tabbla Materia"
           );
         $validator = Validator::make ( Input::all(), $rules);
-        if ($validator->fails())
+        if ($validator->fails()) // si la regla de validacion no es cumplida retorna los errores
         return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
         else {
             $asignatura = new asignaturas();
             $asignatura->Nombre = $request->Nombre;
             $asignatura->save();
-            return response()->json($asignatura);
+            return response()->json($asignatura); // si el dato es guardado, retorna el dato guardado
         }
 
        /* $asignatura = new asignaturas(); // ingresar materia con submit 
@@ -105,9 +105,9 @@ class materiacontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function eliminar(request $request)
+    public function eliminar(request $request) //metodo para eliminar una materia
     {
-        $asignatura = asignaturas::find ($request->id)->delete();
-        return response()->json();
+        $asignatura = asignaturas::find ($request->id)->delete(); //elimina materia
+        return response()->json(); //retorna un json
     }
 }

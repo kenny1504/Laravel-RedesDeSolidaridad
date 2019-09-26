@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="{{asset("assets/$theme/dist/img/logo.png")}}">
-        <title>@yield('titulo','inicio') | Redes De Solidaridad</title>
+        <title>@yield('titulo','inicio') | Redes De Solidaridad</title> <!-- Titulo de la pagina-->
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.7 -->
@@ -38,23 +38,33 @@
 <!-- Site wrapper -->
        <div class="wrapper">
                     <!--inicio header-->
-                    @include("theme.$theme.hearder")
+                    @include("theme.$theme.hearder") <!-- Hearder de la pagina inicio-->
                     <!--fin header -->
                     <!--inicio aside -->
-                    @include("theme.$theme.aside")
+                    @include("theme.$theme.aside") <!-- aside o menu lateral de la pagina inicio-->
                     <!--fin aside -->
 
-                    <div class="content-wrapper">                
-                    @include("Materia.crear") 
-                    @include("Materia.eliminar")       
-                    @include("Alertas.exito") 
-                    @include("Alertas.error")  
-                    @yield('contenido')  
+                    <div class="content-wrapper">  
+                        
+                            <!--******** include de Materia ********-->   
+
+                    @include("Materia.crear") <!-- Modal crear materia-->
+                    @include("Materia.eliminar") <!-- Modal eliminar materia-->      
+                    
+
+                            <!--******** include de Generales ********-->  
+
+                    @include("Alertas.exito") <!-- Modal mensaje "Exito" -->  
+                    @include("Alertas.error") 
+
+
+                  
+                    @yield('contenido')  <!-- Agrega contenido desde otra vista-->  
                   
                     </div>
             <!--inicio footer -->
             <div>
-            @include("theme.$theme.footer")
+            @include("theme.$theme.footer") <!-- footer de la pagina inicio-->
             </div>        
             <!--fin footer -->
 

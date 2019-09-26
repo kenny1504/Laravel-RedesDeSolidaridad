@@ -1,12 +1,11 @@
-@extends("theme.$theme.layout")
-@section('titulo')
+@extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
+
+<!--agrega titulo a la pagina-->
+@section('titulo')  
     Asignaturas
 @endsection
-@section("scripts")
-<script src="{{asset("js/index.js")}}"></script>
-@endsection
 
-@section('contenido')
+@section('contenido')  <!--agrega codigo a la seccion contenido del layout-->
            
             <div class="box">
             <div class="box-header">
@@ -24,20 +23,20 @@
                     </thead>
                         <tbody> <!--Cuerpo de la tabla -->
                         {{ csrf_field() }}
-                         <?php  $no=1; ?>
-                            @foreach ($asignaturas as $asignatura)
-                                <tr id="{{$asignatura->id}}" >
-                                    <td>{{$asignatura->Nombre}}</td> 
+                         <?php  $no=1; ?> <!--Paginacion-->
+                            @foreach ($asignaturas as $asignatura)  <!--ciclo que recorre el arreglo retonrnado del controlador-->
+                                <tr id="{{$asignatura->id}}" >  <!--abre fila-->
+                                    <td>{{$asignatura->Nombre}}</td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>
-                                <button class="btn btn-info eliminar-materia "data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>                                   
+                                <button class="btn btn-success" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-info eliminar-materia "data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                              @endforeach
                         </tbody>
               </table>
             </div>                          
-            {{$asignaturas->links()}}
+            {{$asignaturas->links()}} <!--Paginacion-->
             <div class="panel box box-primary"></div>
             <!-- /.box-body -->
           </div>  
