@@ -43,7 +43,7 @@
                     <!--inicio aside -->
                     @include("theme.$theme.aside") <!-- aside o menu lateral de la pagina inicio-->
                     <!--fin aside -->
-
+   
                     <div class="content-wrapper">  
                         
                             <!--******** include de Materia ********-->   
@@ -60,7 +60,7 @@
 
                   
                     @yield('contenido')  <!-- Agrega contenido desde otra vista-->  
-                  
+                
                     </div>
             <!--inicio footer -->
             <div>

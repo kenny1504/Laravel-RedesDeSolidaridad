@@ -114,6 +114,23 @@
           </a>
           <ul class="treeview-menu">
             <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o text-aqua"></i> Oficios
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Agregar</a></li>
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o text-yellow"></i> Eliminar </a></li>
+                  <li class="treeview">
+                    <a href="#"><i class="fa fa-circle-o text-yellow"></i> Mostrar </a></li>
+              </ul>
+              
+            </li>
+          </ul>
+          <ul class="treeview-menu">
+            <li class="treeview">
               <a href="#"><i class="fa fa-circle-o text-aqua"></i> Level One
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
@@ -127,6 +144,7 @@
                   </a>              
                 </li>
               </ul>
+              
             </li>
           </ul>
         </li>
