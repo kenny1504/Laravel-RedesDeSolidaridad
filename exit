@@ -1,0 +1,114 @@
+[33mcommit 9cc70ab5995fcf215502ee6fc98cf8e36bb86863[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Tue Oct 1 10:11:06 2019 -0600
+
+    Eliminar(Modificacion)
+
+[33mcommit ebe523f8ec7a163551573522331c6af82af9fcfd[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Thu Sep 26 11:33:04 2019 -0600
+
+    Eliminar con comentarios en todo el codigo
+
+[33mcommit 8b990324debccead1b0f9bff545102c671addd8d[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 25 17:07:05 2019 -0600
+
+    Eliminar Materia
+
+[33mcommit 45d3c8297d1f77db22a585161b21308f2b10a471[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 25 07:10:32 2019 -0600
+
+    Comentarios y oren de archivos crear Materia(Validaciones)
+
+[33mcommit a60b656cc8106a2a3c021b2bfb21d24e1b923ded[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Tue Sep 24 12:08:15 2019 -0600
+
+    Validaciones de ingresar materia
+
+[33mcommit eec6a696e3d1873f309b6ae1edd3663e92375ee2[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Tue Sep 24 09:47:57 2019 -0600
+
+    Migraciones
+
+[33mcommit 6fa07d98729ce98474fac6cb63f2718b1ba96aaa[m
+Merge: 232aef5 11af9c8
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Tue Sep 24 09:07:16 2019 -0600
+
+    Merge branch 'master' of https://github.com/kenny1504/Redes-De-Solidaridad
+
+[33mcommit 232aef5aedd7e106caf660ec9f8fdafc4937e075[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Tue Sep 24 09:03:59 2019 -0600
+
+    Modales
+
+[33mcommit 11af9c8ac39daf64cff8c79505fad43a29ee9d1d[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 16:03:24 2019 -0600
+
+    Commit Prueba3
+
+[33mcommit 5bd8337fb3b53517396bf5748b7405ca583e9f11[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 16:02:42 2019 -0600
+
+    Inicio
+
+[33mcommit b99b8734f7a62c4b4c5a765ac6081fc554885424[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 14:29:50 2019 -0600
+
+    commit Base De Datos
+
+[33mcommit 3c659794b5bc811a10968c41714e1f4d7fa16f03[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 12:37:42 2019 -0600
+
+    pene
+
+[33mcommit a9ab8780d75eda30d23690bdb3d09568c9be0270[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 12:36:16 2019 -0600
+
+    Cambio Prueba 2
+
+[33mcommit 708e3b5b531722092b740b8a872138edae87a74b[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 12:30:45 2019 -0600
+
+    Commit inicio
+
+[33mcommit c1468b3044258f9c6824bffdc67b7866a264356b[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 12:23:56 2019 -0600
+
+    file-1.txt adding
+
+[33mcommit 2c52fdbcdfe2c71ce85e3e5ff4e1e796a0364998[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 11:43:02 2019 -0600
+
+    Cambio Prueba
+
+[33mcommit 6756d5affd674739fd8750f78d84a51806f5ff5a[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 11:16:09 2019 -0600
+
+    Commit Prueba
+
+[33mcommit 30e33c39564b52304c3e2412c0a48a88951ef4ef[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 11:10:52 2019 -0600
+
+    Commit Prueba
+
+[33mcommit 5b67b60c3c04071568a7a4988f89f3b0cfccd018[m
+Author: Kenny Saenz <Kennysaenz31@gmail.com>
+Date:   Wed Sep 4 11:02:56 2019 -0600
+
+    Commit Inicial

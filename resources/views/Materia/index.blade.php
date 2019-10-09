@@ -1,6 +1,5 @@
 @extends("theme.$theme.layout")  <!--extiendo del layout "pagina inicio" -->
 
-<!--prueba-->
 <!--agrega titulo a la pagina-->
 @section('titulo')  
     Asignaturas
@@ -20,7 +19,7 @@
                        <tr > 
                          <th>Nombre Asignatura</th>
                          <th></th>
-                       </tr>@csrf
+                       </tr>@csrf <!-- esta varible es para TOken, siempre ponerla-->
                     </thead>
                         <tbody> <!--Cuerpo de la tabla -->
                         {{ csrf_field() }}
@@ -29,7 +28,7 @@
                                 <tr id="{{$asignatura->id}}" >  <!--abre fila-->
                                     <td>{{$asignatura->Nombre}}</td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-success editar" data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
                                 <button class="btn btn-info eliminar-materia "data-id="{{$asignatura->id}}" data-Nombre="{{$asignatura->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>

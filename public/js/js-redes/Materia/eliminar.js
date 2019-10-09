@@ -20,6 +20,7 @@ $('#valor').val(iden);   //manda valor "id" a ventana modal
                     },
                     success: function(data){
                     dat.remove(); //remueve la fila eliminado 
+                    
                     $("#exito").modal("show"); //abre modal de exito
                     $("#exito").fadeTo(2000,500).slideUp(450,function(){   // cierra la modal despues del tiempo determinado  
                                 $("#exito").modal("hide"); // cierra modal

@@ -50,7 +50,7 @@
 
                     @include("Materia.crear") <!-- Modal crear materia-->
                     @include("Materia.eliminar") <!-- Modal eliminar materia-->      
-                    
+                    @include("Materia.editar") <!-- Modal editar materia-->   
 
                             <!--******** include de Generales ********-->  
 
@@ -87,7 +87,7 @@
         <script src="{{asset("js/js-redes//Materia/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
         <script src="{{asset("js/js-redes//Materia/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
         <script src="{{asset("js/js-redes//Materia/eliminar.js")}}"></script> <!-- script eliminar materia-->
-
+        <script src="{{asset("js/js-redes//Materia/editar.js")}}"></script> <!-- script editar materia-->
 
 
 

@@ -2,5 +2,6 @@
 
 $(document).ready(function () {
     Redes.validacionGeneral('ingresar_materia');
+    Redes.validacionGeneral('Editar_materia');
 });
  
