@@ -56,11 +56,8 @@
 
                     @include("Alertas.exito") <!-- Modal mensaje "Exito" -->  
                     @include("Alertas.error") 
-
-
                   
-                    @yield('contenido')  <!-- Agrega contenido desde otra vista-->  
-                
+                    @yield('contenido')  <!-- Agrega contenido desde otra vista-->   
                     </div>
             <!--inicio footer -->
             <div>

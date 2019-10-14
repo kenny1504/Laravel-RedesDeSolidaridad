@@ -14,7 +14,7 @@
                         <label for="Nombre" class="col-sm-2 control-label requerido">Nombre</label>                
                         <div class="col-sm-10">
                         <input type="text" class="hidden" id="idmateria" name="idmateria" > <!-- captura el valor del id de la materia -->
-                        <input type="text" class="form-control" name="Nombre-Materia" id="Nombre-Materia"  required autocomplete="off"> <!-- captura el nombre de la materia -->
+                        <input type="text" class="form-control" name="Nombre-Materia" id="Nombre-Materia"  required autocomplete="off" onkeypress="Ingresar(event)" > <!-- captura el nombre de la materia -->
                           <p class="error text-red hidden">error: </p> <!-- todo error es mostrado aqui -->
                         </div>
                         <br><br>
