@@ -120,11 +120,11 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Agregar</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modal_Oficio" id="m"><i class="fa fa-circle-o text-yellow" ></i> Agregar </a></li>
                 <li class="treeview">
                   <a href="#"><i class="fa fa-circle-o text-yellow"></i> Eliminar </a></li>
                   <li class="treeview">
-                    <a href="#"><i class="fa fa-circle-o text-yellow"></i> Mostrar </a></li>
+                    <li><a href="{{route('Mostrar_oficio')}}"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
               </ul>
               
             </li>

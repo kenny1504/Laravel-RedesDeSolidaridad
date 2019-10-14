@@ -17,3 +17,8 @@ Route::get('/','iniciocontroller@index')->name ('inicio');
 Route::post('Materia/crear','materiacontroller@guardar')->name ('guardar_materia');
 Route::get('Materia/index','materiacontroller@index')->name ('Mostrar_materia');
 Route::post('Materia/eliminar','materiacontroller@eliminar')->name ('Eliminar_materia');
+
+
+#Rutas Oficios
+Route::post('Oficio/crear','oficiocontroller@guardar')->name ('guardar_oficio');
+Route::get('Oficio/index','oficiocontroller@index')->name ('Mostrar_oficio');
