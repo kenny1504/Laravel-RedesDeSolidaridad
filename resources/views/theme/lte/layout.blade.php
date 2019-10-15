@@ -50,13 +50,14 @@
 
                     @include("Materia.crear") <!-- Modal crear materia-->
                     @include("Materia.eliminar") <!-- Modal eliminar materia-->      
-                    
-                     <!--******** include de Oficios ********-->   
+                    @include("Materia.editar") <!-- Modal editar materia-->  
 
-                     @include("T_Oficio.crear") <!-- Modal crear materia-->
-                     
-                     
-                    @include("Materia.editar") <!-- Modal editar materia-->   
+                            <!--******** include de Oficios ********-->   
+
+                    @include("Oficio.crear") <!-- Modal crear materia-->     
+                    
+
+
 
                             <!--******** include de Generales ********-->  
 
@@ -92,8 +93,9 @@
         <script src="{{asset("js/js-redes//Materia/eliminar.js")}}"></script> <!-- script eliminar materia-->
         <script src="{{asset("js/js-redes//Materia/editar.js")}}"></script> <!-- script editar materia-->
 
-        <script src="{{asset("js/js-redes//T_Oficio/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
-        <script src="{{asset("js/js-redes//T_Oficio/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
+        <!--********************* script  "oficio" *************************-->
+        <script src="{{asset("js/js-redes//Oficio/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
+        <script src="{{asset("js/js-redes//Oficio/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
         
 
         @yield('scripts')

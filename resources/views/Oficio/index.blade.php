@@ -18,8 +18,7 @@
               <table id="oficios" class="table table-bordered table-striped">
                      <thead>  <!--Header de la tabla -->  
                        <tr > 
-                         <th>Lista de Oficios</th>
-                         <th></th>
+                         <th>Nombre</th>
                        </tr>@csrf
                     </thead>
                         <tbody> <!--Cuerpo de la tabla -->

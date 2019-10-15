@@ -24,7 +24,7 @@ class oficiocontroller extends Controller
         
         $oficios = oficios::paginate(8); // retorna tabla oficio con su paginacion
         //dd("$oficio");
-        return view('T_Oficio.index')->with('oficios',$oficios); 
+        return view('Oficio.index')->with('oficios',$oficios); 
     }
 
     /**
@@ -44,7 +44,7 @@ class oficiocontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function guardar1(Request $request){
+    public function guardar(Request $request){
         $rules = array( //reglas de validaciones
             'Nombre' => 'required|max:50|unique:oficios,Nombre,', // regla de validacion del campo Nombre "Tabla Oficio"
           );
