@@ -82,9 +82,20 @@ class materiacontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function editar($id)
+    public function editar(Request $request)
     {
-        //
+        $rules = array( //reglas de validaciones
+            'Nombre' => 'required|max:50|unique:asignaturas,Nombre,', // regla de validacion del campo Nombre "Tabbla Materia"
+          );
+        $validator = Validator::make ( Input::all(), $rules);
+        if ($validator->fails()) // si la regla de validacion no es cumplida retorna los errores
+        return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
+        else {
+                $asignaturas = asignaturas::find ($request->id);
+                $asignaturas->Nombre = $request->Nombre;
+                $asignaturas->save();
+                return response()->json($asignaturas);
+        }
     }
 
     /**

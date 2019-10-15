@@ -55,16 +55,15 @@
 
                      @include("Oficio.crear") <!-- Modal crear materia-->
                      
+                     
+                    @include("Materia.editar") <!-- Modal editar materia-->   
 
                             <!--******** include de Generales ********-->  
 
                     @include("Alertas.exito") <!-- Modal mensaje "Exito" -->  
                     @include("Alertas.error") 
-
-
                   
-                    @yield('contenido')  <!-- Agrega contenido desde otra vista-->  
-                
+                    @yield('contenido')  <!-- Agrega contenido desde otra vista-->   
                     </div>
             <!--inicio footer -->
             <div>
@@ -91,7 +90,7 @@
         <script src="{{asset("js/js-redes//Materia/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
         <script src="{{asset("js/js-redes//Materia/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
         <script src="{{asset("js/js-redes//Materia/eliminar.js")}}"></script> <!-- script eliminar materia-->
-
+        <script src="{{asset("js/js-redes//Materia/editar.js")}}"></script> <!-- script editar materia-->
 
         <script src="{{asset("js/js-redes//Oficio/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
         <script src="{{asset("js/js-redes//Oficio/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->

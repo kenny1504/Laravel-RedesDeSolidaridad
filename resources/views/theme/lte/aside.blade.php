@@ -125,28 +125,11 @@
                   <a href="#"><i class="fa fa-circle-o text-yellow"></i> Eliminar </a></li>
                   <li class="treeview">
                     <li><a href="{{route('Mostrar_oficio')}}"  method="GET"><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
-              </ul>
-              
+
             </li>
           </ul>
-          <ul class="treeview-menu">
-            <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o text-aqua"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Level Two</a></li>
-                <li class="treeview">
-                  <a href="#"><i class="fa fa-circle-o text-yellow"></i> Level Two
-                    </span>
-                  </a>              
-                </li>
-              </ul>
-              
-            </li>
-          </ul>
+
+          
         </li>
       </ul>
     </section>
