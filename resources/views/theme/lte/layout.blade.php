@@ -20,8 +20,6 @@
             folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="{{asset("assets/$theme/dist/css/skins/_all-skins.min.css")}}"
       
-      
-
         @yield('styles')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -56,8 +54,6 @@
 
                     @include("Oficio.crear") <!-- Modal crear materia-->     
                     
-
-
 
                             <!--******** include de Generales ********-->  
 
