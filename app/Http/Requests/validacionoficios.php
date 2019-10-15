@@ -31,7 +31,7 @@ class validacionoficios extends FormRequest
     {
         return[
             // Mensaje que retornara si no pasa la validacion
-            'Nombre.unique' => 'Se Mamo-----El Oficio ya existe'
+            'Nombre.unique' => 'El Oficio ya existe'
         ];
         
     }

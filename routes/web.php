@@ -22,6 +22,6 @@ Route::post('Materia/eliminar','materiacontroller@eliminar')->name ('Eliminar_ma
 
 
 #Rutas Oficios
-Route::post('Oficio/crear','oficiocontroller@guardar')->name ('guardar_oficio');
-Route::get('Oficio/index','oficiocontroller@index')->name ('Mostrar_oficio');
+Route::post('T_Oficio/crear','oficiocontroller@guardar1')->name ('guardar_oficio');
+Route::get('T_Oficio/index','oficiocontroller@index')->name ('Mostrar_oficio');
 Route::post('Materia/editar','materiacontroller@editar')->name ('Editar_materia');

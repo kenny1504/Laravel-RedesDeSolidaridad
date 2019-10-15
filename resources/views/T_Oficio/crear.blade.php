@@ -1,5 +1,5 @@
 <!--form para poder activar la ruta y poder guardar el registro--><!-- -->
-<form id="ingresar_oficio"  >
+<form id="ingresar_t_oficio"  >
     <div class="modal  modal-info fade"  id="modal_Oficio" >
               <div class="modal-dialog" >
                 <div class="modal-content" >
@@ -21,7 +21,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="reset" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-outline" id="Oficio"  >Guardar</button>          
+                    <button type="submit" class="btn btn-outline" id="T_Oficio"  >Guardar</button>          
                   </div>
                 </div>
                 <!-- /.modal-content -->

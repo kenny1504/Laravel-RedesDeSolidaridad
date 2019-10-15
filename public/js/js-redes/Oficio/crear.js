@@ -6,14 +6,14 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
 
   });
 
-  $("#Oficio").click(function() { //ajax para ingresar Oficio
+  $("#T_Oficio").click(function() { //ajax para ingresar Oficio
 
     if($('input[name=Nombre]').val()!="") // si el input contiene valores entra 
     {
 
     $.ajax({
       type: 'POST',
-      url: '/Oficio/crear', //llamada a la ruta ingresar Oficio
+      url: '/T_Oficio/crear', //llamada a la ruta ingresar Oficio
       data: {
         _token: $('input[name=_token]').val(),
         Nombre: $('input[name=Nombre]').val()
@@ -26,7 +26,7 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
           $('.error').text("Error: El "+ data.errors.Nombre); 
         } else { // si no contiene errores agrega el dato a la tabla oficio
           $('.error').addClass('hidden'); //elimina el mensaje de error
-        var datos=  "<tr class='oficios" + data.id + "'>"+"<td>"+data.Nombre+"</td>"
+        var datos=  "<tr class='oficio" + data.id + "'>"+"<td>"+data.Nombre+"</td>"
         + "<td>"+"<button class='btn btn-success' data-toggle='modal' data-target='#' onclick=''><i class=' fa fa-fw fa-pencil'></i></button>"
         + "<button class='btn btn-info eliminar-oficio' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
         +"</td>"+"</tr>"; // variable guarda el valor 

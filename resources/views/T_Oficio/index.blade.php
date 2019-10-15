@@ -10,7 +10,7 @@
            
             <div class="box">
             <div class="box-header">
-              <h2 class="box-title text-light-blue">Oficio</h2>
+              <h2 class="box-title text-light-blue">Oficios</h2>
               <a href="#" data-toggle="modal" data-target="#modal_Oficio" class="btn btn-warning btn-sm pull-right" id="m2">Agregar Oficio</a>
             </div>
             <!-- /.box-header -->
@@ -30,7 +30,7 @@
                                     <td>{{$oficio->Nombre}}</td>  <!--agrega dato a la columna-->
                                 <td>
                                 <button class="btn btn-success" data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
-                                <button class="btn btn-info eliminar-materia "data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
+                                <button class="btn btn-info eliminar-oficio "data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>
                              @endforeach
