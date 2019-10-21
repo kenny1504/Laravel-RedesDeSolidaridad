@@ -20,8 +20,8 @@ function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presion
   }
 
     $("#editar_confirmar").click(function() {
-        
         $.ajax({
+                
                     type: 'POST',
                     url: '/Materia/editar', // ruta editar materia
                     data: {

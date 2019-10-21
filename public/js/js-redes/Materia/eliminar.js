@@ -5,8 +5,18 @@ dat = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (E
 var iden=$(this).attr("data-id"); // captura el valor "id" de la materia
 $('#eliminar_Materia').modal('show'); // abre ventana modal
 $('#valor').val(iden);   //manda valor "id" a ventana modal
-
 }); 
+
+function eliminar(button)
+{
+    dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Eliminar)
+    var ide=$(button).attr("data-id"); // captura el valor "id" de la materia
+    $('#eliminar_Materia').modal('show'); // abre ventana modal
+    $('#valor').val(ide);   //manda valor "id" a ventana modal
+
+}
+
+
 
 
     $("#confirmar").click(function() {
