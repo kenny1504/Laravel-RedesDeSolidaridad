@@ -20,8 +20,6 @@
             folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="{{asset("assets/$theme/dist/css/skins/_all-skins.min.css")}}"
       
-      
-
         @yield('styles')
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,9 +53,13 @@
                             <!--******** include de Oficios ********-->   
 
                     @include("Oficio.crear") <!-- Modal crear materia-->     
+<<<<<<< HEAD
                     @include("Oficio.eliminar") <!-- Modal eliminar oficio-->    
                     @include("Oficio.editar") <!-- Modal editar oficio-->  
 
+=======
+                    
+>>>>>>> 2778007af978ce1ba88c6b4f4ff1e5a014abcb4e
 
                             <!--******** include de Generales ********-->  
 
