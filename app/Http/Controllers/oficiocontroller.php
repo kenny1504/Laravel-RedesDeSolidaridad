@@ -81,6 +81,18 @@ class oficiocontroller extends Controller
     public function editar($id)
     {
         //
+        $rules = array( //reglas de validaciones
+            'Nombre' => 'required|max:50|unique:oficios,Nombre,', // regla de validacion del campo Nombre "Tabla Oficio"
+          );
+        $validator = Validator::make ( Input::all(), $rules);
+        if ($validator->fails()) // si la regla de validacion no es cumplida retorna los errores
+        return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
+        else {
+                $oficios = oficios::find ($request->id);
+                $oficios->Nombre = $request->Nombre;
+                $oficios->save();
+                return response()->json($oficios);
+        }
     }
 
     /**
@@ -103,6 +115,7 @@ class oficiocontroller extends Controller
      */
     public function eliminar(request $request) //metodo para eliminar una materia
     {
-        
+        $oficio = oficios::find ($request->id)->delete(); //elimina oficio
+        return response()->json(); //retorna un json
     }
 }

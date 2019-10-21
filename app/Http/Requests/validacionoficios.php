@@ -24,14 +24,14 @@ class validacionoficios extends FormRequest
     public function rules()
     {
         return [ // campo nombre validado para que no sea >50 y ademas sea Unico NO Exista
-            'Nombre' => 'required|max:50|unique:oficios,Nombre,' . $this->route('id') 
+            'Nombre_oficio' => 'required|max:50|unique:oficios,Nombre_oficio,' . $this->route('id') 
         ];
     }
     public function messages()
     {
         return[
             // Mensaje que retornara si no pasa la validacion
-            'Nombre.unique' => 'El Oficio ya existe'
+            'Nombre_oficio.unique' => 'El Oficio ya existe'
         ];
         
     }

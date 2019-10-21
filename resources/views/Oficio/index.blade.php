@@ -28,7 +28,7 @@
                                 <tr id="{{$oficio->id}}" >  <!--abre fila-->
                                     <td>{{$oficio->Nombre}}</td>  <!--agrega dato a la columna-->
                                 <td>
-                                <button class="btn btn-success" data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
+                                <button class="btn btn-success editaroficio" data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class=" fa fa-fw fa-pencil"></i></button>  <!--botton para editar -->
                                 <button class="btn btn-info eliminar-oficio "data-id="{{$oficio->id}}" data-Nombre="{{$oficio->Nombre}}" ><i class="fa fa-fw fa-trash "></i></button>  <!--botton para eliminar-->                                   
                                 </td>
                                 </tr>

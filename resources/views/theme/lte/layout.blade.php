@@ -55,8 +55,8 @@
                             <!--******** include de Oficios ********-->   
 
                     @include("Oficio.crear") <!-- Modal crear materia-->     
-                    
-
+                    @include("Oficio.eliminar") <!-- Modal eliminar oficio-->    
+                    @include("Oficio.editar") <!-- Modal editar oficio-->  
 
 
                             <!--******** include de Generales ********-->  
@@ -96,7 +96,8 @@
         <!--********************* script  "oficio" *************************-->
         <script src="{{asset("js/js-redes//Oficio/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
         <script src="{{asset("js/js-redes//Oficio/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
-        
+        <script src="{{asset("js/js-redes//Oficio/eliminar.js")}}"></script> <!-- script eliminar oficio-->
+        <script src="{{asset("js/js-redes//Oficio/editar.js")}}"></script> <!-- script eliminar oficio-->
 
         @yield('scripts')
         
