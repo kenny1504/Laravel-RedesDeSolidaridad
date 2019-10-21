@@ -2,7 +2,7 @@
 
 $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
     $('.error').addClass('hidden');
-    $("#Nombre-error").addClass('hidden');
+    $("#Nombre_oficio-error").addClass('hidden');
 
   });
 
@@ -21,7 +21,7 @@ $("#m,#m2").click(function(){ // agrega la clase hidden para ocultar label error
       success: function(data){ //agregar el nuevo ingreso a la tabla
         if ((data.errors)) { // si el ajax contiene errores agrega un label indicando el error 
           $('.error').removeClass('hidden');
-          $("#Nombre-error").addClass('hidden');
+          $("#Nombre_oficio-error").addClass('hidden');
           $('.error').text("Error: El "+ data.errors.Nombre); 
         } else {
         var datos=  "<tr class='oficio" + data.id + "'>"+"<td>"+data.Nombre+"</td>"
