@@ -29,8 +29,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- Google Font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+      
 </head>
     <body class="hold-transition skin-blue  sidebar-mini">
 <!-- Site wrapper -->
@@ -53,13 +52,10 @@
                             <!--******** include de Oficios ********-->   
 
                     @include("Oficio.crear") <!-- Modal crear materia-->     
-<<<<<<< HEAD
                     @include("Oficio.eliminar") <!-- Modal eliminar oficio-->    
                     @include("Oficio.editar") <!-- Modal editar oficio-->  
 
-=======
                     
->>>>>>> 2778007af978ce1ba88c6b4f4ff1e5a014abcb4e
 
                             <!--******** include de Generales ********-->  
 
@@ -80,7 +76,7 @@
         <!-- jQuery 3 -->
        </div>
 
-        <script src="{{asset("assets/$theme/bower_components/jquery/dist/jquery.min.js")}}"></script>
+         <script src="{{asset("assets/$theme/bower_components/jquery/dist/jquery.min.js")}}"></script>
         <script src="{{asset("assets/$theme/bower_components/bootstrap/dist/js/bootstrap.min.js")}}"></script>
         <script src="{{asset("assets/$theme/bower_components/jquery-slimscroll/jquery.slimscroll.min.js")}}"></script>
         <script src="{{asset("assets/$theme/bower_components/fastclick/lib/fastclick.js")}}"></script>
@@ -104,7 +100,7 @@
         <script src="{{asset("js/js-redes//Oficio/eliminar.js")}}"></script> <!-- script eliminar oficio-->
         <script src="{{asset("js/js-redes//Oficio/editar.js")}}"></script> <!-- script eliminar oficio-->
 
-        @yield('scripts')
+        
         
 
 

@@ -11,7 +11,7 @@ $('#Nombre-Oficio').val(name);
 }); 
 
 
-function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presionar ENTER 
+function Ingresar_oficio(e) { // Metodo para guardar(editar) datos los datos al presionar ENTER 
     var tecla = (document.all) ? e.keyCode : e.which;
     if (tecla==13) // si es 13 entonces presiono ENTER
     {

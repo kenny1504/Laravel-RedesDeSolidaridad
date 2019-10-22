@@ -1,15 +1,17 @@
 var dat; //variable global que guarda el dato "tr" (Fila a editar)
 
-$(".editar").click(function() { // ajax para editar una materia
-dat = $(this).closest("tr"); //captura toda la fila donde se efectuo el click (Editar)
-var ide=$(this).attr("data-id");//obtiene el id de la materia
-var name=$(this).attr("data-Nombre");//obtiene nombre de la materia
+
+function editar_Materia(button)
+{
+dat = $(button).closest("tr"); //captura toda la fila donde se efectuo el click (Editar)
+var name =$(button).parents("tr").find("td").text(); //obtiene nombre de la materia (nuevo)
+var ide=$(button).attr("data-id");//obtiene el id de la materia
+//var name=$(button).attr("data-Nombre"); //anterior capturar nombre
 $('#editar_Materia').modal('show'); // abre ventana modal
 $('.error').addClass('hidden'); // oculta error del servidor(validacion-servidor)
 $('#idmateria').val(ide);   //manda valor "id" a ventana modal Nombre
 $('#Nombre-Materia').val(name);
-}); 
-
+}
 
 function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presionar ENTER 
     var tecla = (document.all) ? e.keyCode : e.which;
@@ -35,9 +37,9 @@ function Ingresar(e) { // Metodo para guardar(editar) datos los datos al presion
                                 $('.error').text("Error: El "+ data.errors.Nombre); 
                           } else {
 
-                                var datos=  "<tr class='asignatura" + data.id + "'>"+"<td>"+data.Nombre+"</td>"
-                                + "<td>"+"<button class='btn btn-success editar' data-toggle='modal' data-target='#' onclick=''><i class=' fa fa-fw fa-pencil'></i></button>"
-                                + "<button class='btn btn-info eliminar-materia' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
+                                var datos=  "<tr class=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
+                                + "<td>"+"<button class='btn btn-success'  onclick='editar_Materia(this);' data-id="+ data.id +" data-Nombre="+data.Nombre+"><i class=' fa fa-fw fa-pencil'></i></button>"
+                                + "<button class='btn btn-info ' onclick='eliminar(this);' data-id="+ data.id +"><i class='fa fa-fw fa-trash '></i></button>"                                   
                                 +"</td>"+"</tr>";// variable guarda los nuevos valores
 
                                 dat.replaceWith(datos); //reemplaza por los nuevos datos

@@ -27,8 +27,8 @@ $("#m,#m2").click(function(){
         } else { // si no contiene errores agrega el dato a la tabla asignaturas
           $('.error').addClass('hidden'); //elimina el mensaje de error
         var datos=  "<tr id=" + data.id + ">"+"<td>"+data.Nombre+"</td>"
-        + "<td>"+"<button class='btn btn-success' data-toggle='modal' data-target='#' ><i class=' fa fa-fw fa-pencil'></i></button>"
-        + "<button class='btn btn-info eliminar-materia' data-id="+ data.id +" onclick='eliminar(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
+        + "<td>"+"<button class='btn btn-success' data-id="+ data.id +"  onclick='editar_Materia(this);' ><i class=' fa fa-fw fa-pencil'></i></button>"
+        + "<button class='btn btn-info' data-id="+ data.id +" onclick='eliminar(this);'><i class='fa fa-fw fa-trash '></i></button>"                                   
         +"</td>"+"</tr>"; // variable guarda el valor 
        $('#asignaturas').append(datos); // agrega nuevo registro a tabla
       
