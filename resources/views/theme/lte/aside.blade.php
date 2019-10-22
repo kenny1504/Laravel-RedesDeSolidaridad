@@ -162,11 +162,12 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#" data-toggle="modal" data-target="#" id="">
+                <li><a href="#" data-toggle="modal" data-target="#modal_Parentesco" id="m">
                   <i class="fa fa-circle-o text-yellow" ></i> Agregar </a>
                 </li>
                 <li class="treeview">
-                    <li><a href="#" ><i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
+                    <li><a href="{{route('Mostrar_parentesco')}}"  method="GET">
+                      <i class="fa fa-circle-o text-yellow"></i> Mostrar</a></li>
                 </li>
               </ul> <!--final del parentescos --->  
                   

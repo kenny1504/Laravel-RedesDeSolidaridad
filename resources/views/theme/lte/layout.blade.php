@@ -53,14 +53,15 @@
                             <!--******** include de Oficios ********-->   
 
                     @include("Oficio.crear") <!-- Modal crear materia-->     
-<<<<<<< HEAD
                     @include("Oficio.eliminar") <!-- Modal eliminar oficio-->    
                     @include("Oficio.editar") <!-- Modal editar oficio-->  
 
-=======
-                    
->>>>>>> 2778007af978ce1ba88c6b4f4ff1e5a014abcb4e
+                    <!--******** include de Parentesco ********-->  
+                    @include("Parentesco.crear") <!-- Modal crear Parentesco-->
+                    @include("Parentesco.eliminar") <!-- Modal eliminar Parentesco-->    
+                    @include("Parentesco.editar") <!-- Modal editar Parentesco-->  
 
+                    
                             <!--******** include de Generales ********-->  
 
                     @include("Alertas.exito") <!-- Modal mensaje "Exito" -->  
@@ -102,7 +103,13 @@
         <script src="{{asset("js/js-redes//Oficio/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
         <script src="{{asset("js/js-redes//Oficio/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
         <script src="{{asset("js/js-redes//Oficio/eliminar.js")}}"></script> <!-- script eliminar oficio-->
-        <script src="{{asset("js/js-redes//Oficio/editar.js")}}"></script> <!-- script eliminar oficio-->
+        <script src="{{asset("js/js-redes//Oficio/editar.js")}}"></script> <!-- script editar oficio-->
+
+        <!--********************* script  "parentesco" *************************-->
+        <script src="{{asset("js/js-redes//Parentesco/agregar.js")}}"></script> <!-- escript para validar datos requeridos-->
+        <script src="{{asset("js/js-redes//Parentesco/crear.js")}}"></script> <!-- escript para ingresar datos por ajax-->
+        <script src="{{asset("js/js-redes//Parentesco/eliminar.js")}}"></script> <!-- script eliminar parentesco-->
+        <script src="{{asset("js/js-redes//Parentesco/editar.js")}}"></script> <!-- script editar parentesco-->
 
         @yield('scripts')
         

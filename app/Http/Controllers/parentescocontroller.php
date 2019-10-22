@@ -9,10 +9,10 @@ use Validator;
 use Response;
 use Illuminate\Support\Facades\Input;
 use App\http\Requests;
-use App\oficios;
-use App\Http\Requests\validacionoficios;
+use App\parentescos;
+use App\Http\Requests\validacionparentescos;
 
-class oficiocontroller extends Controller
+class parentescocontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,9 +22,9 @@ class oficiocontroller extends Controller
     public function index()
     {
         
-        $oficios = oficios::paginate(8); // retorna tabla oficio con su paginacion
-        //dd("$oficio");
-        return view('Oficio.index')->with('oficios',$oficios); 
+        $parentescos = parentescos::paginate(8); // retorna tabla parentesco con su paginacion
+        //dd("$parentesco");
+        return view('Parentesco.index')->with('parentescos',$parentescos); 
     }
 
     /**
@@ -46,16 +46,16 @@ class oficiocontroller extends Controller
     
     public function guardar(Request $request){
         $rules = array( //reglas de validaciones
-            'Nombre' => 'required|max:50|unique:oficios,Nombre,', // regla de validacion del campo Nombre "Tabla Oficio"
+            'Nombre' => 'required|max:50|unique:parentescos,Parentesco,', // regla de validacion del campo Nombre "Tabla Parentesco"
           );
         $validator = Validator::make ( Input::all(), $rules);
         if ($validator->fails()) // si la regla de validacion no es cumplida retorna los errores
         return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
         else {
-            $oficio = new oficios();
-            $oficio->Nombre = $request->Nombre;
-            $oficio->save();
-            return response()->json($oficio); // si el dato es guardado, retorna el dato guardado
+            $parentesco = new parentescos();
+            $parentesco->Parentesco = $request->Nombre;
+            $parentesco->save();
+            return response()->json($parentesco); // si el dato es guardado, retorna el dato guardado
         }
 
       
@@ -82,17 +82,18 @@ class oficiocontroller extends Controller
     {
         //
         $rules = array( //reglas de validaciones
-            'Nombre' => 'required|max:50|unique:oficios,Nombre,', // regla de validacion del campo Nombre "Tabla Oficio"
+            'Nombre' => 'required|max:50|unique:parentescos,Parentesco,', // regla de validacion del campo Nombre "Tabla Parentesco"
           );
         $validator = Validator::make ( Input::all(), $rules);
         if ($validator->fails()) // si la regla de validacion no es cumplida retorna los errores
         return Response::json(array('errors'=> $validator->getMessageBag()->toarray()));
         else {
-                $oficios = oficios::find ($request->id);
-                $oficios->Nombre = $request->Nombre;
-                $oficios->save();
-                return response()->json($oficios);
+                $parentescos = parentescos::find ($request->id);
+                $parentescos->Parentesco = $request->Nombre;
+                $parentescos->save();
+                return response()->json($parentescos);
         }
+        
     }
 
     /**
@@ -113,9 +114,9 @@ class oficiocontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function eliminar(request $request) //metodo para eliminar una materia
+    public function eliminar(request $request) //metodo para eliminar un parentesco
     {
-        $oficio = oficios::find ($request->id)->delete(); //elimina oficio
+        $parentesco = parentescos::find ($request->id)->delete(); //elimina parentesco
         return response()->json(); //retorna un json
     }
 }
