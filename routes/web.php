@@ -23,3 +23,10 @@ Route::post('Materia/editar','materiacontroller@editar')->name ('Editar_materia'
 Route::post('Oficio/crear','oficiocontroller@guardar')->name ('guardar_oficio');
 Route::get('Oficio/index','oficiocontroller@index')->name ('Mostrar_oficio');
 Route::post('Oficio/eliminar','oficiocontroller@eliminar')->name ('Eliminar_oficio');
+Route::post('Oficio/editar','oficiocontroller@editar')->name ('Editar_oficio');
+
+//Rutas Parentescos
+Route::post('Parentesco/crear','parentescocontroller@guardar')->name ('guardar_parentesco');
+Route::get('Parentesco/index','parentescocontroller@index')->name ('Mostrar_parentesco');
+Route::post('Parentesco/eliminar','parentescocontroller@eliminar')->name ('Eliminar_parentesco');
+Route::post('Parentesco/editar','parentescocontroller@editar')->name ('Editar_parentesco');
